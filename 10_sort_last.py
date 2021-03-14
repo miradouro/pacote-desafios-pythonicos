@@ -10,8 +10,20 @@ Irá retornar: [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
 Dica: Use uma custom key= function para extrair o ultimo elemento de cada tupla.
 """
 def sort_last(tuples):
-    # +++ SUA SOLUÇÃO +++
-    return
+    lista1 = []
+    pos = 0
+    while pos < len(tuples):
+        if lista1 == []:
+            lista1.append(tuples[pos])
+        else:
+            pos2 = 0
+            while pos2 < len(lista1):
+                if lista1[pos2][-1] >= tuples[pos][-1]:
+                    lista1.insert(pos2, tuples[pos])
+                    break
+                pos2 += 1
+        pos += 1
+    return lista1
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---

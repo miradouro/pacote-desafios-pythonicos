@@ -10,7 +10,17 @@ Irá retornar: [1, 2, 3]
 
 def remove_adjacent(nums):
     # +++ SUA SOLUÇÃO +++
-    return
+    num = 0
+    while num < len(nums):
+        if len(nums)-1 > num:
+            while nums.count(nums[num]) > 1 and nums[num] == nums[num + 1]:
+                nums.pop(num)
+                if num >= (len(nums) - 1):
+                    break
+        else:
+            break
+        num += 1
+    return nums
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
